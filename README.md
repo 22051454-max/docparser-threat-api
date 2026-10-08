@@ -64,3 +64,7 @@ Set `API_KEYS` in any public deployment so the demo key is disabled.
 ## Limitations
 
 Static analysis only: no sandbox detonation or OCR for scanned images. Treat verdicts as triage signals, not a replacement for an antivirus engine.
+
+## Author and contributors
+
+- **Sandeep Kashyap** ([@sktut](https://github.com/sktut)), author and maintainer
