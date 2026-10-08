@@ -1,0 +1,19 @@
+TAX INVOICE
+From: Acme Industrial Supplies Pvt Ltd
+GSTIN: 20ABCDE1234F1Z5
+Invoice No: INV-2026-0042
+Invoice Date: 05/10/2026
+Due Date: 04/11/2026
+Bill To: Ranchi Steel Fabricators, Industrial Area, Ranchi
+Contact: accounts@acme-supplies.example | +91 98765 43210
+
+Item Qty Rate Amount
+1. Safety Helmets 50 350.00 17500.00
+2. Welding Gloves 100 120.00 12000.00
+3. Hydraulic Oil 20L 4 2250.00 9000.00
+
+Subtotal: Rs. 38500.00
+GST @ 18%: Rs. 6930.00
+Grand Total: Rs. 45430.00
+
+Payment by bank transfer within 30 days. Thank you for your business.

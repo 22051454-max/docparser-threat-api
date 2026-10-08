@@ -1,0 +1,14 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DocShield API</title><link rel="stylesheet" href="/static/style.css"></head><body>
+<header><b>DocShield</b> <span class="muted">Document parser + threat detection API</span><span class="grow"></span><a href="/docs">API docs</a></header>
+<main>
+<div class="card"><label>API key</label><input id="key" value="demo-key-123"></div>
+<div class="grid">
+<div class="card"><h3>Parse a document</h3><p class="muted">PDF, DOCX, TXT, CSV. Every upload is threat-scanned first; malicious files are quarantined, not parsed.</p>
+<input type="file" id="docfile"><button id="parseBtn">Upload &amp; parse</button></div>
+<div class="card"><h3>Check URLs</h3><textarea id="urls" rows="3">http://sbi-secure-login.verify-kyc.xyz/account/update
+https://github.com</textarea><button id="urlBtn">Scan URLs</button></div>
+<div class="card"><h3>Scan text / email</h3><textarea id="text" rows="3">Urgent action required: verify your account at http://185.220.101.44/login.php</textarea><button id="textBtn">Extract IOCs</button></div>
+</div>
+<div class="card"><h3>Result</h3><div id="summary"></div><pre id="out">Run a request to see the JSON response.</pre></div>
+</main><script src="/static/app.js"></script></body></html>

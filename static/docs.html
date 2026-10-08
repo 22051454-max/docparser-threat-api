@@ -1,0 +1,19 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DocShield API docs</title>
+<link rel="stylesheet" href="/static/style.css"></head><body><header><b>DocShield API v1</b><span class="grow"></span><a href="/">Demo UI</a></header><main><div class="card">
+<p>All endpoints except <code>/api/v1/health</code> require the header <code>X-API-Key</code>.</p>
+<table>
+<tr><th>Method</th><th>Path</th><th>Body</th><th>Returns</th></tr>
+<tr><td>GET</td><td>/api/v1/health</td><td>-</td><td>Status, which integrations are enabled</td></tr>
+<tr><td>POST</td><td>/api/v1/documents</td><td>multipart <code>file</code></td><td>Job: threat scan + parsed document (type, fields, line items, entities, summary, validation)</td></tr>
+<tr><td>GET</td><td>/api/v1/documents</td><td>-</td><td>Recent jobs</td></tr>
+<tr><td>GET</td><td>/api/v1/documents/{id}</td><td>-</td><td>Stored job result</td></tr>
+<tr><td>POST</td><td>/api/v1/threats/file</td><td>multipart <code>file</code></td><td>Hashes, entropy, indicators, verdict, optional VirusTotal stats</td></tr>
+<tr><td>POST</td><td>/api/v1/threats/url</td><td><code>{"url": "..."}</code> or <code>{"urls": [...]}</code></td><td>Per-URL indicators and verdict</td></tr>
+<tr><td>POST</td><td>/api/v1/threats/text</td><td><code>{"text": "..."}</code></td><td>IOCs (IPs, URLs, domains, hashes, emails, CVEs), phishing signals, verdict</td></tr>
+</table>
+<h3>Example</h3>
+<pre>curl -H "X-API-Key: demo-key-123" -F file=@samples/invoice_acme.pdf http://localhost:5003/api/v1/documents
+curl -H "X-API-Key: demo-key-123" -H "Content-Type: application/json" \
+     -d '{"url":"http://paypal.account-verify.top/login"}' http://localhost:5003/api/v1/threats/url</pre>
+<p>Verdicts: <span class="v clean">clean</span> score &lt; 30 · <span class="v suspicious">suspicious</span> 30-69 · <span class="v malicious">malicious</span> ≥ 70. Indicator weights are combined with noisy-OR.</p>
+</div></main></body></html>

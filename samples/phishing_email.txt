@@ -1,0 +1,7 @@
+Subject: Urgent action required: your account will be suspended
+
+Dear customer,
+We detected an unusual sign-in on your SBI net banking. Kindly verify your account within 24 hours or your account will be blocked.
+Click here to update your KYC: http://sbi-secure-login.verify-kyc.xyz/account/update
+Alternate link: http://185.220.101.44/login.php
+Attachment hash for reference: 44d88612fea8a8f36de82e1278abb02f
